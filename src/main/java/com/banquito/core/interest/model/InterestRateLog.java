@@ -32,16 +32,21 @@ public class InterestRateLog implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "INTEREST_LOG_ID", nullable = false)
     private Integer id;
+
     @Column(name = "CODE_INTEREST_RATE", length = 8, nullable = false)
     private String codeInterestRate;
+
     @Column(name = "VALUE", precision = 17, scale = 2, nullable = false)
     private BigDecimal value;
+
     @Temporal(TemporalType.DATE)
     @Column(name = "START_DATE", nullable = false)
     private Date startDate;
+
     @Temporal(TemporalType.DATE)
     @Column(name = "END_DATE")
     private Date endDate;
+
     @Column(name = "STATE", length = 3, nullable = false)
     private String state;
 
@@ -77,7 +82,4 @@ public class InterestRateLog implements Serializable {
             return false;
         return true;
     }
-
-    
-
 }

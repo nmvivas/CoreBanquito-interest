@@ -24,10 +24,13 @@ public class InterestRate implements Serializable {
     @Id
     @Column(name = "CODE_INTEREST_RATE", length = 10, nullable = false)
     private String code;
+
     @Column(name = "NAME", length = 100, nullable = false)
     private String name;
+
     @Column(name = "DAYS_IN_MONTH", precision = 2, nullable = false)
     private BigDecimal daysInMonth;
+
     @Column(name = "DAYS_IN_YEAR", precision = 3, nullable = false)
     private BigDecimal daysInYear;
 
@@ -59,5 +62,4 @@ public class InterestRate implements Serializable {
             return false;
         return true;
     }
-
 }
