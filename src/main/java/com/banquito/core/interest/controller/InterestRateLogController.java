@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = { RequestMethod.GET, RequestMethod.POST,
+        RequestMethod.PUT })
 @RestController
 @RequestMapping(path = "/interest-rate-logs")
 public class InterestRateLogController {
